@@ -109,7 +109,7 @@ function Fallback () {
   return (
     <div className="fallback">
       <div>
-        代码仓库: <a href="https://github.com/shfshanyue/2019-ncov">shfshanyue/2019-ncov</a>
+       
       </div>
     </div>
   )
@@ -156,7 +156,6 @@ function Header ({ province }) {
         <br />
         疫情实时动态 · { province ? province.name : '省市地图' }
       </h1>
-      <i>By 全栈成长之路</i>
     </header>
   )
 }

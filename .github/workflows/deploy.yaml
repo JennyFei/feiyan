@@ -42,10 +42,10 @@ jobs:
     #   run: ossutil rm oss://shanyue-ncov/static -rf
     #   if: github.event_name == 'schedule'
     - name: cp static files to aliyun
-      run: ossutil cp -rf build/static/ oss://shanyue-ncov/static/
+      run: ossutil cp -rf build/static/ oss://thjk-feiyan-ncov/static/
     - name: cp all files to aliyun
-      run: ossutil cp -rf build oss://shanyue-ncov/
+      run: ossutil cp -rf build oss://thjk-feiyan-ncov/
     - name: set no-cache in sw.js
-      run: ossutil set-meta oss://shanyue-ncov/index.html cache-control:"no-cache" --update -rf
+      run: ossutil set-meta oss://thjk-feiyan-ncov/index.html cache-control:"no-cache" --update -rf
     - name: set long term cache
-      run: ossutil set-meta oss://shanyue-ncov/static cache-control:"max-age=31536000" --update -rf
+      run: ossutil set-meta oss://thjk-feiyan-ncov/static cache-control:"max-age=31536000" --update -rf
