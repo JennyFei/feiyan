@@ -73,7 +73,7 @@ function Summary () {
       <li><a href="https://news.qq.com/zt2020/page/feiyan.htm">腾讯新闻新冠疫情实时动态</a></li>
       <li><a href="https://3g.dxy.cn/newh5/view/pneumonia">丁香园新冠疫情实时动态</a></li>
       <li><a href="https://vp.fact.qq.com/home">新型冠状病毒实时辟谣</a></li>
-      <li><a href="https://promo.guahao.com/topic/pneumonia">微医抗击疫情实时救助</a></li>
+      {/* <li><a href="https://promo.guahao.com/topic/pneumonia">微医抗击疫情实时救助</a></li> */}
     </div>
   )
 }
@@ -204,11 +204,11 @@ function App () {
       <Stat { ...overall } name={province && province.name} modifyTime={all.modifyTime} />
       <div className="card">
         <h2>疫情地图 { province ? `· ${province.name}` : false }
-        {
+        {/* {
           province ? <small
             onClick={() => setProvince(null)}
           >返回全国</small> : null
-        }
+        } */}
         </h2>
         <Suspense fallback={<div className="loading">地图正在加载中...</div>}>
           <Map province={province} data={data} onClick={name => {
