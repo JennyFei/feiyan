@@ -49,7 +49,7 @@ function Map ({ province, data, onClick }) {
           {min: 10, max: 99},
           {min: 1, max: 9},
         ],
-        padding: 5,
+        padding: [0,5,15,5],
         // "inverse": false,
         // "splitNumber": 5,
         orient: province ? 'horizontal' : 'vertical',

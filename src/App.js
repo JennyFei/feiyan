@@ -50,7 +50,7 @@ function News ({ province }) {
 
   return (
     <div className="card">
-      <h2>实时动态</h2>
+      <h3>实时动态</h3>
       {
         news
           .filter(n => province ? province.provinceShortName === (n.provinceName && n.provinceName.slice(0, 2)) : true)
@@ -65,7 +65,7 @@ function News ({ province }) {
 function Summary () {
   return (
     <div className="card info">
-      <h2>信息汇总</h2>
+      <h3>信息汇总</h3>
       <li>
         <a href="https://m.yangshipin.cn/static/2020/c0126.html">疫情24小时 | 与疫情赛跑</a>
       </li>
@@ -81,12 +81,12 @@ function Summary () {
 function Stat ({ modifyTime, confirmedCount, suspectedCount, deadCount, curedCount, name }) {
   return (
     <div className="card">
-      <h2>
+      <h3>
         统计 {name ? `· ${name}` : false}
         <span className="due">
           截止时间: {dayjs(modifyTime).format('YYYY-MM-DD HH:mm')}
         </span>
-      </h2>
+      </h3>
       <div className="row">
         <Tag number={confirmedCount}>
           确诊
@@ -151,11 +151,11 @@ function Header ({ province }) {
   return (
     <header>
       <div className="bg"></div>
-      <h1>
+      {/* <h1>
         <small>新型冠状病毒</small>
         <br />
         疫情实时动态 · { province ? province.name : '省市地图' }
-      </h1>
+      </h1> */}
     </header>
   )
 }
@@ -203,13 +203,13 @@ function App () {
       <Header province={province} />
       <Stat { ...overall } name={province && province.name} modifyTime={all.modifyTime} />
       <div className="card">
-        <h2>疫情地图 { province ? `· ${province.name}` : false }
+        <h3>疫情地图 { province ? `· ${province.name}` : false }
         {/* {
           province ? <small
             onClick={() => setProvince(null)}
           >返回全国</small> : null
         } */}
-        </h2>
+        </h3>
         <Suspense fallback={<div className="loading">地图正在加载中...</div>}>
           <Map province={province} data={data} onClick={name => {
             const p = provincesByName[name]
