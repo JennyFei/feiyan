@@ -135,8 +135,10 @@ a {
 
 h3 small {
   color: #f60;
-  position: absolute;
+  /* position: absolute; 
   right: 0;
-  top: 50%;
+  top: 60%; */
+  float:right;
   transform: translateY(-50%);
+  margin-top:10px;
 }
