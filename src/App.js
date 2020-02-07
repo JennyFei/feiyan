@@ -204,11 +204,11 @@ function App () {
       <Stat { ...overall } name={province && province.name} modifyTime={all.modifyTime} />
       <div className="card">
         <h3>疫情地图 { province ? `· ${province.name}` : false }
-        {/* {
+        {
           province ? <small
             onClick={() => setProvince(null)}
           >返回全国</small> : null
-        } */}
+        }
         </h3>
         <Suspense fallback={<div className="loading">地图正在加载中...</div>}>
           <Map province={province} data={data} onClick={name => {
