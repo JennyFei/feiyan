@@ -23,8 +23,8 @@ jobs:
       with:
         node-version: 10.x
     # npm install
-    - name: whiami
-      run: curl https://whoami.shanyue.tech/
+    # - name: whiami
+    #   run: curl https://whoami.shanyue.tech/
     - name: npm install
       run: npm install
     - name: build data
