@@ -16,8 +16,12 @@ const getCitiesByProvince = (name) => {
 
 const loadCountries = async data => {
   const countries = data
-    .match(/window.getListByCountryTypeService2 = (.*?)}catch/)[1]
+    .match(/window.getListByCountryTypeService2 = (.*?)}catch/)
   fs.writeFileSync('./src/data/countries.json', countries)
+
+  // const countries = data
+  //   .match(/window.getListByCountryTypeService2 = (.*?)}catch/)[1]
+  // fs.writeFileSync('./src/data/countries.json', countries)
 }
 
 const loadOverall = async data => {
